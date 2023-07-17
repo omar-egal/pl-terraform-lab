@@ -12,11 +12,7 @@ provider "aws" {
   region = var.aws_region
 }
 
-resource "aws_vpc" "test_vpc" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "test_vpc"
-  }
+module "networking" {
+  source   = "./networking"
+  vpc_cidr = "10.16.0.0/16"
 }
