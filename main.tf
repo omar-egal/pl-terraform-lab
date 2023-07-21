@@ -16,5 +16,6 @@ module "networking" {
   source             = "./networking"
   vpc_cidr           = "10.16.0.0/16"
   num_public_subnets = 2
-  region             = var.aws_region
+  #  max_subnets        = 20
+  region = var.aws_region
 }

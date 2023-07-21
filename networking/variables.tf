@@ -2,6 +2,7 @@
 
 variable "vpc_cidr" {}
 variable "num_public_subnets" {}
+#variable "max_subnets" {}
 variable "region" {}
 variable "public_subnet_name" {
   description = "Name of the public subnets."
